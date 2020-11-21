@@ -1,0 +1,48 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav-bar {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 30%;
+  margin-right: 150px;
+}
+
+.logo {
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  left: 150px;
+  top: 24px;
+}
+
+.header__orders {
+  color: black;
+  font-size: 25px;
+}
+
+.header_link {
+  text-decoration: none;
+}
+
+.header__Rectangle {
+  background: #e26313;
+  border-radius: 5px;
+  width: 150px;
+  height: 40px;
+  left: 1517px;
+  top: 29px;
+}
+.header__button_text {
+  color: white;
+  font-size: 25px;
+
+  padding: 10px 30px;
+}
