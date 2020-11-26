@@ -15,21 +15,14 @@ function Header() {
                     <Logo />
                </div>
            </Link> 
-        
-      
-
-          
 
         <div className="nav-bar">
         
               <div className="header__option "> 
-              <Link to= "/" className="header_link">
-              <span className="header__orders">
+              <Link to= "/orders" className="header_link">
+                <span className="header__orders">
                 Orders
-              </span>
-              
-              
-           
+                </span>
               </Link>
             </div>
             <div className="header__option "> 
@@ -42,7 +35,7 @@ function Header() {
             </div>
             
             <div className="header__option "> 
-            <Link to = "/contact-us" className="header_link">
+            <Link to = "/sign-up" className="header_link">
                <div className="header__Rectangle">
                 <span className="header__button_text">
                
