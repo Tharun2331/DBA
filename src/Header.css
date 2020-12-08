@@ -6,6 +6,8 @@
   position: absolute;
   width: 100%;
   padding-top: 2%;
+  top: 0;
+  z-index: 1;
 }
 
 .nav-bar {
@@ -14,7 +16,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 30%;
+  width: 35%;
   margin-right: 100px;
 }
 
@@ -22,13 +24,15 @@
   position: absolute;
   width: 20%;
   height: 20%;
-  left: 125px;
+  left: 80px;
   top: 50px;
 }
 
 .header__orders {
   color: black;
   font-size: 25px;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .header_link {
@@ -40,6 +44,7 @@
   border-radius: 5px;
   width: 175px;
   height: 40px;
+  cursor: pointer;
 }
 .header__button_text {
   font-family: Raleway;
@@ -47,5 +52,5 @@
   letter-spacing: 0em;
   text-align: center;
   color: white;
-  margin-left: 45px;
+  margin-left: 55px;
 }

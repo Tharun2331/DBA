@@ -6,8 +6,8 @@ import SearchIcon from '@material-ui/icons/Search';
 function HomePage() {
     return (
         <div className="Home"> 
-            <div className="home_img">
-                 <img src="/images/Rectangle.png" alt="image" />
+            <div>
+                 <img src="/images/Rectangle.png" alt="image" className="home_img"/>
             </div>
             <form>
                 <div>
