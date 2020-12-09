@@ -3,7 +3,11 @@ import "./Header.css";
 import { Link, useHistory } from "react-router-dom";
 import { ReactComponent as Logo } from "./assets/Logo.svg";
 import {auth} from "./firebase";
+
+import {useStateValue} from './StateProvider';
+
 import { useStateValue } from './StateProvider';
+
 import { initialState } from "./reducer";
 
 
@@ -70,5 +74,9 @@ function Header() {
   );
 }
 
+
 export default Header;
+
+export default Header;
+
 

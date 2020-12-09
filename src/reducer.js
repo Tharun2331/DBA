@@ -2,9 +2,13 @@ export const initialState = {
     user: null
   };
   
+
+
+=======
 //   // Selector
 //   export const getBasketTotal = (basket) => 
 //     basket?.reduce((amount, item) => item.price + amount, 0);
+
   
 export const reducer = (state, action) => {
     console.log(action);
@@ -19,6 +23,10 @@ export const reducer = (state, action) => {
       default:
         return state;
     }
+
+  };
+=======
   };
   
   
+
