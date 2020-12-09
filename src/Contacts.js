@@ -3,6 +3,8 @@ import React from "react";
 import { Link, useHistory } from "react-router-dom";
 import "./Contacts.css";
 import { ReactComponent as Logo } from "./assets/Logo.svg";
+import CustomButton from "./Custom-Button";
+
 export default function ContactUs() {
   function sendEmail(e) {
     e.preventDefault();
@@ -67,11 +69,9 @@ export default function ContactUs() {
                 ></textarea>
               </div>
               <div className="sub">
-                <input
-                  type="submit"
-                  className="form-control"
-                  value="Send "
-                ></input>
+                <CustomButton >
+                  SIGN IN
+               </CustomButton>
               </div>
             </div>
           </form>
@@ -79,9 +79,9 @@ export default function ContactUs() {
         <div className="col-6 ">
           <img
             src="/images/Rectangle2.png"
-            alt="image"
+            alt=""
             className="contact-img"
-          />
+           />
         </div>
       </div>
     </div>

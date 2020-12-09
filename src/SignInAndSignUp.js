@@ -5,13 +5,14 @@ import SignUp from "./SignUp";
 
 function SignInAndSignUp() {
     return (
-        <div className="row">
-            <div className="col-6">
-                <SignIn />
-             </div>
-             <div className="col-6">
+        <div className="SignInAndSignUp row">
+               <div className="col">
+               <SignIn />
+               </div>
+                <div className="col">
                 <SignUp />
-             </div>
+                </div>
+                 
        </div>
         
     )

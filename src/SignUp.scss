@@ -1,0 +1,26 @@
+.form {
+  margin-left: 0;
+  display: flex;
+  flex-direction: column;
+  width: 330px;
+  align-content: center;
+  margin-top: 10%;
+  position: relative;
+  margin-bottom: 5%;
+}
+
+.sign__up {
+  margin-top: 25%;
+  margin-left: 20%;
+}
+
+.passwords {
+  margin-top: 10%;
+}
+
+.form-control {
+  padding: 20px 10px 20px;
+  margin: 10px;
+  margin-left: -35px;
+  width: 400px;
+}
