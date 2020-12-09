@@ -3,18 +3,23 @@
   flex-direction: column;
   justify-content: flex-start;
   align-content: space-between;
-  margin-left: 20%;
-  margin-top: 10%;
+  margin-left: 27%;
+  margin-top: 25%;
 
   .form {
     display: flex;
     flex-direction: column;
-    margin-left: 7%;
-    margin-top: 10%;
+    margin-top: 12%;
+    position: relative;
+    margin-bottom: 5%;
   }
 }
 
 .row {
   height: 100%;
   width: 100%;
+}
+
+.signIn {
+  padding: 8px;
 }
