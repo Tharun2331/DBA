@@ -10,12 +10,12 @@
 
 .contact-row {
   z-index: -1;
-  height: 800px;
+  height: 800px !important;
 }
 
 .form-control {
   padding: 10px;
-  margin: 10px;
+  margin: 15px;
   width: 400px;
 }
 
@@ -35,4 +35,8 @@
 
 .letUsKnow {
   padding-bottom: 5%;
+}
+
+.send_button {
+  margin-top: 0;
 }
