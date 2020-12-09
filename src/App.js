@@ -11,8 +11,8 @@ function App() {
   return (
     <Router>
       <div className="App">
+      <Header />
         <Switch>
-         
 
           <Route path="/contact-us">
             <ContactUs />
@@ -24,6 +24,7 @@ function App() {
             <HomePage />
           </Route>
         </Switch>
+        <Footer />
       </div>
     </Router>
   );
