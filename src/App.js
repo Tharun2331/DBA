@@ -8,6 +8,7 @@ import ContactUs from "./Contacts";
 import SignInAndSignUp from "./SignInAndSignUp";
 import { useStateValue } from './StateProvider';
 import {auth} from "./firebase"
+
 function App() {
   const [{},dispatch] = useStateValue();
   useEffect(() => {
