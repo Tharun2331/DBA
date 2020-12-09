@@ -2,7 +2,8 @@ import emailjs from "emailjs-com";
 import React from "react";
 import { Link, useHistory } from "react-router-dom";
 import "./Contacts.css";
-import { ReactComponent as Logo } from "./assets/Logo.svg";
+import CustomButton from "./Custom-Button";
+
 export default function ContactUs() {
   function sendEmail(e) {
     e.preventDefault();
@@ -66,13 +67,13 @@ export default function ContactUs() {
                   name="message"
                 ></textarea>
               </div>
-              <div className="sub">
-                <input
-                  type="submit"
-                  className="form-control"
-                  value="Send "
-                ></input>
+            
+            <div className="send_button">
+              <CustomButton >
+                SEND
+              </CustomButton>
               </div>
+
             </div>
           </form>
         </div>
