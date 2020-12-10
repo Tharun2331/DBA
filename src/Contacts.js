@@ -2,7 +2,10 @@ import emailjs from "emailjs-com";
 import React from "react";
 import { Link, useHistory } from "react-router-dom";
 import "./Contacts.css";
+
 import { ReactComponent as Logo } from "./assets/Logo.svg";
+
+
 import CustomButton from "./Custom-Button";
 
 export default function ContactUs() {
@@ -68,11 +71,20 @@ export default function ContactUs() {
                   name="message"
                 ></textarea>
               </div>
+
               <div className="sub">
                 <CustomButton >
                   SIGN IN
                </CustomButton>
+
+            
+            <div className="send_button">
+              <CustomButton >
+                SEND
+              </CustomButton>
+
               </div>
+
             </div>
           </form>
         </div>
