@@ -12,6 +12,7 @@ import ContactUs from "./Contacts";
 import SignInAndSignUp from "./SignInAndSignUp";
 import { useStateValue } from './StateProvider';
 import {auth} from "./firebase"
+import Shop from "./Shop";
 
 function App() {
 
@@ -61,6 +62,9 @@ function App() {
           </Route>
           <Route path="/sign-in">
             <SignInAndSignUp />
+          </Route>
+          <Route path="/shop">
+              <Shop />
           </Route>
           <Route path="/">
             <HomePage />

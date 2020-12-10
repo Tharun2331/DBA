@@ -10,11 +10,11 @@ function Footer() {
                <div className="row footer_motto">
                     <h1>Your One Stop Shop For All Your Needs.</h1>
                </div>
-               <div className="row footer_cc">
+               <div className=" footer_cc">
                    <CopyrightIcon />       
                    <span style={{paddingLeft: "15px"}}>E-Commerce, Inc. 2020</span> 
                </div>
-               <div className="row footer_logo">
+               <div className="footer_logo">
                     <Logo />    
                </div>
 

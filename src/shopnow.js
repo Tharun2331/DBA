@@ -1,7 +1,16 @@
 import React from 'react';
-import "./Card.scss";
+import {useHistory} from "react-router-dom";
+import "./shopnow.scss"
 
-const Card = ({name, imageUrl, price}) => {
+
+const ShopNow = ({name, imageUrl, price}) => {
+       
+        const history = useHistory();
+    
+        const  handleClicks = () => {
+       history.push("/shop")      
+  }
+  
     return (
       
       <div className="cards"> 
@@ -13,7 +22,7 @@ const Card = ({name, imageUrl, price}) => {
           }}
         />
         <div className='content'>
-          <span className='subtitle'>ADD TO CART</span>
+          <span className='subtitle' onClick={handleClicks}>Shop Now</span>
         </div>
       </div>
       <div className="card-name">
@@ -24,4 +33,4 @@ const Card = ({name, imageUrl, price}) => {
     )
 }
 
-export default Card
+export default ShopNow ;
