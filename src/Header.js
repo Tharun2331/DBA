@@ -4,15 +4,15 @@ import { Link, useHistory } from "react-router-dom";
 import { ReactComponent as Logo } from "./assets/Logo.svg";
 import {auth} from "./firebase";
 import {useStateValue} from './StateProvider';
-import { initialState } from "./reducer";
+
 
 
 function Header() {
   const [{ user },dispatch] =  useStateValue();  
   const history = useHistory();
   
-  const handleOrders = () => {
-    history.push("orders");
+  const handleShop = () => {
+    history.push("shop");
   };
 
   const handleHelp = () => {
@@ -48,8 +48,8 @@ function Header() {
 
       <div className="nav-bar">
         <div className="header__option ">
-          <span className="header__orders" onClick={handleOrders}>
-            Orders
+          <span className="header__orders" onClick={handleShop}>
+            Shop
           </span>
         </div>
         <div className="header__option ">
