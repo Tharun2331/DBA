@@ -1,9 +1,6 @@
 import "./App.css";
 
 import React,{useEffect} from "react";
-
-import React,{ useEffect} from "react";
-
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./Header";
 import HomePage from "./Home-page";
@@ -14,11 +11,13 @@ import { useStateValue } from './StateProvider';
 import {auth} from "./firebase"
 import Shop from "./Shop";
 
+import CheckoutPage from "./checkoutPage";
+
 function App() {
 
   const [{}, dispatch ] = useStateValue();
 
-  const [{},dispatch] = useStateValue();
+
 
   useEffect(() => {
     // check user is logged in or not
@@ -41,21 +40,13 @@ function App() {
        });
      },[]);
 
-
-
- 
-  return (
-    <Router>
-      <div className="App">
-          <Header />
-
   return (
     <Router>
       <div className="App">
         <Header />
 
         <Switch>
-         
+
 
           <Route path="/contact-us">
             <ContactUs />
@@ -66,11 +57,14 @@ function App() {
           <Route path="/shop">
               <Shop />
           </Route>
+          <Route path="/checkout">
+              <CheckoutPage />
+          </Route>
           <Route path="/">
             <HomePage />
           </Route>
         </Switch>
-        <Footer />
+    
       </div>
     </Router>
   );
