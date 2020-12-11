@@ -42,7 +42,16 @@ function App() {
   return (
     <Router>
       <div className="App">
+<<<<<<< HEAD
       <Header />
+=======
+
+      <Header />
+=======
+        <Header />
+
+
+>>>>>>> 6e607526e0d4a0d6eb9329b7a2aed67f35aeb0b3
         <Switch>
 
           <Route path="/contact-us">

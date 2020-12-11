@@ -72,9 +72,13 @@ export default function ContactUs() {
                 ></textarea>
               </div>
 
+<<<<<<< HEAD
              
 
             
+=======
+            <div className="sub">
+>>>>>>> 6e607526e0d4a0d6eb9329b7a2aed67f35aeb0b3
             <div className="send_button">
               <CustomButton >
                 SEND
