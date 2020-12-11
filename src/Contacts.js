@@ -78,10 +78,7 @@ export default function ContactUs() {
                </CustomButton>
 
             
-            <div className="send_button">
-              <CustomButton >
-                SEND
-              </CustomButton>
+           
 
               </div>
 
