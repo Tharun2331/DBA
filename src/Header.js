@@ -2,17 +2,18 @@ import React from "react";
 import "./Header.css";
 import { Link, useHistory } from "react-router-dom";
 import { ReactComponent as Logo } from "./assets/Logo.svg";
+import { ReactComponent as Vector } from "./assets/Vector.svg";
 import {auth} from "./firebase";
 
 import {useStateValue} from './StateProvider';
 
 
 
-import { initialState } from "./reducer";
+
 
 
 function Header() {
-  const [{ user },dispatch] =  useStateValue();  
+  const [{ user,basket },dispatch] =  useStateValue();  
   const history = useHistory();
   
   const handleShop = () => {
@@ -69,6 +70,17 @@ function Header() {
             </span>
           </div>
         </div>
+
+        <div className="header__option ">
+            <Link to = "/checkout">
+              <div className="vector">  
+                <Vector />
+                <span className="vector2">{basket?.length}</span>
+              </div>        
+            </Link>
+       </div>
+
+
       </div>
     </div>
   );

@@ -1,7 +1,8 @@
 import React from 'react';
 import Card from "./Card";
 import "./Shop.css";
-import items from "./SHOP_DATA";    
+import items from "./SHOP_DATA";
+   
 
 function Shop() {
     console.log(items.name);
@@ -16,7 +17,12 @@ function Shop() {
                     
                     </div>
         </div>
-    )
+       
+    )                   
 }
- 
- export default Shop;
+
+export default Shop;
+
+
+
+

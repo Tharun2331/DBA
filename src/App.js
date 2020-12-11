@@ -12,6 +12,8 @@ import { useStateValue } from './StateProvider';
 import {auth} from "./firebase"
 import Shop from "./Shop";
 
+import CheckoutPage from "./checkoutPage";
+
 function App() {
 
   const [{}, dispatch ] = useStateValue();
@@ -42,17 +44,12 @@ function App() {
   return (
     <Router>
       <div className="App">
-<<<<<<< HEAD
       <Header />
-=======
-
-      <Header />
-=======
-        <Header />
-
-
->>>>>>> 6e607526e0d4a0d6eb9329b7a2aed67f35aeb0b3
         <Switch>
+
+
+
+
 
           <Route path="/contact-us">
             <ContactUs />
@@ -63,11 +60,14 @@ function App() {
           <Route path="/shop">
               <Shop />
           </Route>
+          <Route path="/checkout">
+              <CheckoutPage />
+          </Route>
           <Route path="/">
             <HomePage />
           </Route>
         </Switch>
-        <Footer />
+    
       </div>
     </Router>
   );
