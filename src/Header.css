@@ -16,7 +16,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 35%;
+  width: 40%;
   margin-right: 100px;
 }
 
@@ -53,4 +53,18 @@
   text-align: center;
   color: white;
   margin-left: 55px;
+}
+
+.vector2 {
+  position: absolute;
+  font-size: 12xpx;
+  font-weight: bold;
+  bottom: 2%;
+  right: 7%;
+}
+
+.vector {
+  width: 30px;
+  height: 24px;
+  bottom: 0;
 }

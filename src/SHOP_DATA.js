@@ -195,13 +195,6 @@ const SHOP_DATA = [
          imageUrl:"https://m.media-amazon.com/images/I/51bSW9gjoaL._AC_UY327_FMwebp_QL65_.jpg", 
          rating:5,
          price:1543.09
-        },
-        {
-          id:28,
-          name: "TCL 50S425 50 inch 4K Smart LED  TV ",
-          imageUrl:"https://m.media-amazon.com/images/I/71tN5cFBvFL._AC_UY327_FMwebp_QL65_.jpg", 
-          rating:4,
-          price: 1500
         }
       ]
   
