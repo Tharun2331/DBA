@@ -6,7 +6,7 @@ import CopyrightIcon from '@material-ui/icons/Copyright';
 function Footer() {
     return (
         <div className="main-footer">
-           <div className="container">
+           <div className="container-1">
                <div className="row footer_motto">
                     <h1>Your One Stop Shop For All Your Needs.</h1>
                </div>
