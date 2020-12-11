@@ -19,10 +19,10 @@ const CardList = ({name,id,imageUrl}) => {
                         }
                     
                     </div>
-               
+                    
                 
-                 <h1 className="heading">Curated For You</h1>
-                 <span style={{marginLeft:"7%"}}>Minimum 40% Discount on all these items</span>
+                 <h1 className="heading">Minimum 40% Discount on all these items</h1>
+                 <span style={{marginLeft:"7%"}}>Curated For You</span>
                     <div className="cards-container card-list">
                     {
                             items
