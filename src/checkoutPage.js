@@ -32,7 +32,9 @@ function Checkout() {
 
         </div>
       </div>
-
+<div>
+  <Subtotal />
+</div>
       
     </div>
   );
