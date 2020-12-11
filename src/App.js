@@ -60,7 +60,7 @@ return(
           <Route path="/checkout">
               <CheckoutPage />
           </Route>
-          <Route path="/">
+          <Route exact path="/">
             <HomePage />
           </Route>
         </Switch>
