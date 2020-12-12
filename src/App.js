@@ -1,7 +1,11 @@
 import "./App.css";
 
+<<<<<<< HEAD
 import React,{useEffect} from "react";
 
+=======
+import React,{ useEffect} from "react";
+>>>>>>> 8cb56757c76c057fa0d020e038d41c84876038ed
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./Header";
@@ -41,6 +45,7 @@ function App() {
        });
      },[]);
 
+<<<<<<< HEAD
 
 return(
 <Router>
@@ -48,6 +53,15 @@ return(
         <Switch>
 
 
+=======
+    
+  return (
+    <Router>
+      <div className="App">
+      <Header />
+        <Switch>
+
+>>>>>>> 8cb56757c76c057fa0d020e038d41c84876038ed
           <Route path="/contact-us">
             <ContactUs />
           </Route>
@@ -64,10 +78,10 @@ return(
             <HomePage />
           </Route>
         </Switch>
-    
+    <Footer />
       </div>
     </Router>
   );
-}
+  }
 
 export default App;

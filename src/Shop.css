@@ -1,10 +1,116 @@
-.card-list {
+.input[type="text"] {
+  width: 130px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+  height: 50px;
+  margin-left: 20%;
+  margin-top: 15%;
+  margin-bottom: 5%;
+}
+
+/* When the input field gets focus, change its width to 100% */
+.input[type="text"]:focus {
+  width: 60%;
+}
+
+.main_content {
+  position: relative;
+  width: 80%;
+  height: 100%;
+  margin: 50px auto;
+  padding: 50px 0 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 20px;
+  grid-gap: 30px;
+  margin-top: -5%;
+}
+
+.main_content h3 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #2d343e;
+  font-size: 10.5vw;
+}
+
+.main_content .card {
   width: 100%;
-  padding: 5%;
-  padding-top: 3%;
-  padding-left: 8%;
-  margin-top: 15%;
+  border-radius: 15px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  -webkit-transform: scale(0.8);
+  transform: scale(0.8);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 50px;
+}
+
+.main_content .card .card_img {
+  margin-top: -5vw;
+}
+
+.main_content .card .card_img img {
+  width: 200px;
+}
+
+.main_content .card .card_header {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  color: black;
+  margin: 25px 0;
+}
+
+.main_content .card .card_header h2 {
+  font-size: 18px;
+}
+
+.main_content .card .card_header p {
+  font-size: 14px;
+  text-align: center;
+  color: black;
+  margin: 8px 0;
+  color: #fe8033;
+}
+
+.main_content .card .card_header .price {
+  font-size: 25px;
+  color: #fe8033;
+}
+
+.main_content .card .card_header .price span {
+  font-size: 15px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.main_content .card:hover {
+  background-color: #2b3039;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.main_content .card:hover .btn {
+  background-color: #fe8033;
+  color: #fff;
 }

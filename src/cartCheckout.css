@@ -1,8 +1,8 @@
 .btn {
-  width: 130px;
+  width: 20% !important;
   height: 35px;
   font-size: 14px;
-  border-radius: 35px;
+  border-radius: 30px;
   background-color: #2d343e;
   color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
@@ -17,7 +17,7 @@
   justify-content: center;
 }
 
-.main_content {
+.main_content_checkout {
   position: relative;
   width: 70%;
   height: 100%;
@@ -31,11 +31,11 @@
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 20px;
 }
 
-.main_content h3 {
+.main_content_checkout h3 {
   position: absolute;
   left: 0;
   top: 0;
@@ -43,7 +43,7 @@
   font-size: 10.5vw;
 }
 
-.main_content .card {
+.main_content_checkout .card {
   width: 60%;
   border-radius: 15px;
   -webkit-box-orient: vertical;
@@ -58,67 +58,53 @@
   margin-bottom: 50px;
 }
 
-.main_content .card .card_img {
+.main_content_checkout .card .card_img {
   margin-top: -5vw;
-  display: flex;
-  justify-content: center;
-  height: 300px;
 }
 
-.main_content .card .card_img img {
+.main_content_checkout .card .card_img img {
   width: 200px;
 }
 
-.main_content .card .card_header {
+.main_content_checkout .card .card_header {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
   color: black;
   margin: 25px 0;
-  align-items: flex-end;
 }
 
-.main_content .card .card_header h2 {
+.main_content_checkout .card .card_header h2 {
   font-size: 18px;
-  text-align: center;
-  justify-content: center;
-  color: #fe8033;
 }
 
-.main_content .card .card_header p {
+.main_content_checkout .card .card_header p {
   font-size: 14px;
   text-align: center;
   color: black(255, 255, 255, 0.3);
   margin: 8px 0;
-  justify-content: center;
-  color: #fe8033;
 }
 
-.main_content .card .card_header .price {
+.main_content_checkout .card .card_header .price {
   font-size: 25px;
   color: #fe8033;
 }
 
-.main_content .card .card_header .price span {
+.main_content_checkout .card .card_header .price span {
   font-size: 15px;
   display: inline-block;
   vertical-align: top;
 }
 
-.main_content .card:hover {
-  background-color: white;
+.main_content_checkout .card:hover {
+  background-color: #2b3039;
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
   cursor: pointer;
 }
 
-.main_content .card:hover .btn {
+.main_content_checkout .card:hover .btn {
   background-color: #fe8033;
   color: black;
-}
-
-.card_img {
-  margin-top: 10% !important;
-  margin-left: 4%;
 }
