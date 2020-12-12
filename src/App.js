@@ -47,10 +47,6 @@ function App() {
       <Header />
         <Switch>
 
-
-
-
-
           <Route path="/contact-us">
             <ContactUs />
           </Route>
@@ -67,7 +63,7 @@ function App() {
             <HomePage />
           </Route>
         </Switch>
-    
+    <Footer />
       </div>
     </Router>
   );

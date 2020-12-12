@@ -121,7 +121,7 @@ const SHOP_DATA = [
         },
         {
           id : 17 , 
-                name : "Samsung  Galaxy Note 20 Ultra ",
+                name : "Samsung Note 20 Ultra ",
                 imageUrl : "https://m.media-amazon.com/images/I/813y2+dPUOL._AC_UY327_FMwebp_QL65_.jpg",
                 rating : 5,
                 price : 900.00

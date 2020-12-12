@@ -8,13 +8,13 @@ const CardList = ({name,id,imageUrl}) => {
         return (
             <div style={{ padding: "5%"}}>
                 
-                 <span className="heading">Top Selling Products</span>
-                    <div className="cards-container card-list">
+                 <h1 className="heading">Top Selling Products</h1>
+                    <div className="main_content">
                         {
                             items
                             .filter((item,idx) => idx < 3)
                             .map(({name, id, imageUrl, price}) => (
-                                <ShopNow key={id} name={name} imageUrl={imageUrl} price={price} />
+                                <Card key={id} name={name} imageUrl={imageUrl} price={price} />
                             ))
                         }
                     
@@ -22,13 +22,13 @@ const CardList = ({name,id,imageUrl}) => {
                     
                 
                  <h1 className="heading">Minimum 40% Discount on all these items</h1>
-                 <span style={{marginLeft:"7%"}}>Curated For You</span>
-                    <div className="cards-container card-list">
+                 <h4 style={{marginLeft:"0%"}}>Curated For You</h4>
+                    <div className="main_content">
                     {
                             items
                             .filter((item,idx) => idx >12 && idx<19)
                              .map(({name, id, imageUrl, price }) => (
-                                <ShopNow key={id} name={name} imageUrl={imageUrl} price={price} />
+                                <Card key={id} name={name} imageUrl={imageUrl} price={price} />
                             ))
                         }   
                     
