@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 import React,{useStateValue} from "react";
 import "./Header.css";
-=======
-import React from "react";
-import "./Header.scss";
->>>>>>> 8cb56757c76c057fa0d020e038d41c84876038ed
 import { Link, useHistory } from "react-router-dom";
 import { ReactComponent as Logo } from "./assets/Logo.svg";
 import { ReactComponent as Vector } from "./assets/Vector.svg";
