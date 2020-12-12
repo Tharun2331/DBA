@@ -1,21 +1,13 @@
 import React from 'react';
-import "./Card.css";
-import { useStateValue } from './StateProvider';
 
-const Cards = ({name, id, imageUrl, price}) => {
+import { useStateValue } from './StateProvider';
+const CartCheckout = ({name, id, imageUrl, price}) => {
 
   const [{basket},dispatch] = useStateValue();
-  const addToBasket = () => {
-    
-    // dispatch the item into the data layer
+  const removeFromBasket= () => {
     dispatch({
-      type: "ADD_TO_BASKET",
-      item: {
-        id: id,
-        name: name,
-        imageUrl: imageUrl,
-        price: price
-            }
+      type: "REMOVE_FROM_BASKET",
+        id:id
     });
     console.log('done');
   }; 
@@ -30,7 +22,9 @@ const Cards = ({name, id, imageUrl, price}) => {
         <h2>{name}</h2>
         <p>Lorem Ipsum is simply dummy text of the printing </p>
         <p className="price">{price}<span>$</span></p>
-        <div className="btn" onClick={addToBasket}>Add to cart</div>
+        <div className="btn" onClick={removeFromBasket}>
+           Remove from basket
+        </div>
     </div>
 </div>
    
@@ -38,7 +32,7 @@ const Cards = ({name, id, imageUrl, price}) => {
     )
 }
 
-export default Cards
+export default CartCheckout
 
 
 

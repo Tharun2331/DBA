@@ -4,9 +4,11 @@ export const initialState = {
   user: null
 };
 
-// Selector
+//    Selector
 export const getBasketTotal = (basket) => 
-  basket?.reduce((amount, item) => item.price + amount, 0);
+basket?.reduce((amount, item) => item.price + amount, 0);
+
+
 
 export const reducer = (state, action) => {
   console.log(action);
@@ -43,14 +45,18 @@ export const reducer = (state, action) => {
         basket: newBasket
       }
     
-    case "SET_USER":
-      return {
-        ...state,
-        user: action.user
-      }
+      case "SET_USER":
+        return {
+          ...state,
+          user: action.user
+        }
+  
+      default:
+        return state;
+    }
 
-    default:
-      return state;
-  }
-}
+  };
+  
+  
+  
 

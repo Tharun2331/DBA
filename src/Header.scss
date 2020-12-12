@@ -18,6 +18,7 @@
   justify-content: space-between;
   width: 40%;
   margin-right: 100px;
+  font-family: "Luckiest Guy", cursive;
 }
 
 .logo {
@@ -42,29 +43,31 @@
 .header__Rectangle {
   background: #e26313;
   border-radius: 5px;
-  width: 175px;
+  width: 130px;
   height: 40px;
   cursor: pointer;
 }
 .header__button_text {
-  font-family: Raleway;
+  font-family: "Luckiest Guy", cursive;
   font-size: 24px;
   letter-spacing: 0em;
   text-align: center;
   color: white;
-  margin-left: 55px;
-}
-
-.vector2 {
-  position: absolute;
-  font-size: 12xpx;
-  font-weight: bold;
-  bottom: 2%;
-  right: 7%;
+  margin-left: 25px;
 }
 
 .vector {
-  width: 30px;
-  height: 24px;
-  bottom: 0;
+  .vector1 {
+    width: 40px;
+    height: 40px;
+  }
+
+  .vector2 {
+    position: absolute;
+    font-size: 20px;
+    font-weight: bold;
+    bottom: 2px;
+    right: 113px;
+    color: black;
+  }
 }

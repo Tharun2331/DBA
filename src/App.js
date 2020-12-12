@@ -1,6 +1,7 @@
 import "./App.css";
 
-import React,{useEffect} from "react";
+import React,{ useEffect} from "react";
+
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./Header";
 import HomePage from "./Home-page";
@@ -16,7 +17,6 @@ import CheckoutPage from "./checkoutPage";
 function App() {
 
   const [{}, dispatch ] = useStateValue();
-
 
 
   useEffect(() => {
@@ -40,20 +40,12 @@ function App() {
        });
      },[]);
 
+    
   return (
     <Router>
       <div className="App">
-
       <Header />
-=======
-        <Header />
-
-
         <Switch>
-
-
-=======
-
 
           <Route path="/contact-us">
             <ContactUs />
@@ -71,10 +63,10 @@ function App() {
             <HomePage />
           </Route>
         </Switch>
-    
+    <Footer />
       </div>
     </Router>
   );
-}
+  }
 
 export default App;

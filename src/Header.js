@@ -1,5 +1,5 @@
 import React from "react";
-import "./Header.css";
+import "./Header.scss";
 import { Link, useHistory } from "react-router-dom";
 import { ReactComponent as Logo } from "./assets/Logo.svg";
 import { ReactComponent as Vector } from "./assets/Vector.svg";
@@ -33,8 +33,9 @@ function Header() {
     if(user) {
       auth.signOut();
       dispatch({
-        type: "SET_USER",
-        user: null,
+        type: "EMPTY_BASKET",
+        basket: null, 
+     
       });
       history.push("/");
     }
@@ -74,7 +75,7 @@ function Header() {
         <div className="header__option ">
             <Link to = "/checkout">
               <div className="vector">  
-                <Vector />
+                <Vector className="vector1"/>
                 <span className="vector2">{basket?.length}</span>
               </div>        
             </Link>
