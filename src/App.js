@@ -1,8 +1,8 @@
 import "./App.css";
 
 import React,{useEffect} from "react";
-
-
+import ReactNotifications from 'react-notifications-component'
+import 'react-notifications-component/dist/theme.css'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./Header";
 import HomePage from "./Home-page";
@@ -44,6 +44,9 @@ function App() {
 
 return(
 <Router>
+   <div>
+       <ReactNotifications />
+    </div>  
   <div>
     <Header />
         <Switch>

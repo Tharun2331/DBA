@@ -81,7 +81,8 @@
 
 .main_content_checkout .card .card_img {
   margin-top: -5vw;
-  margin-left: 60px;
+  display: flex;
+  justify-content: center;
   height: 300px;
 }
 
@@ -94,13 +95,13 @@
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  color: black;
+  color: #fe8033;
   margin: 25px 0;
 }
 
 .main_content_checkout .card .card_header h2 {
   font-size: 18px;
-  margin-left: 80px;
+  text-align: center;
 }
 
 .main_content_checkout .card .card_header p {
@@ -108,6 +109,7 @@
   text-align: center;
   color: black(255, 255, 255, 0.3);
   margin: 8px 0;
+  color: #fe8033;
 }
 
 .main_content_checkout .card .card_header .price {
@@ -122,7 +124,7 @@
 }
 
 .main_content_checkout .card:hover {
-  background-color: #aaaaaa;
+  background-color: #2b3039;
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
   cursor: pointer;
@@ -130,7 +132,7 @@
 
 .main_content_checkout .card:hover .btn {
   background-color: #fe8033;
-  color: black;
+  color: #2b3039;
 }
 
 .card_img {

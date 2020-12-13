@@ -27,15 +27,14 @@ function Shop() {
              
           <div className="main_content">
           { 
-              filter ? 
+              filter.length ? 
 
             (filter.map(({name, id, imageUrl, price}) => (
                 <Card  key={id} name={name} imageUrl={imageUrl} price={price} />
-            ))) : console.log("not found")
-
+            ))) : <h1 style={{marginLeft:"100%",width: "100%"}}> Sorry..... Not Found</h1>
         }
           </div>
-        
+          
     
         
      </div> 

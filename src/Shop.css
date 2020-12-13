@@ -65,6 +65,7 @@
 
 .main_content .card .card_img {
   margin-top: -5vw;
+  height: 300px;
 }
 
 .main_content .card .card_img img {
@@ -87,7 +88,6 @@
 .main_content .card .card_header p {
   font-size: 14px;
   text-align: center;
-  color: black;
   margin: 8px 0;
   color: #fe8033;
 }
