@@ -31,7 +31,7 @@ const Cards = ({name, id, imageUrl, price}) => {
         <p className="price">{price}<span>$</span></p>
         <>
       
-        <button className="btn"
+        <button className="btn1"
           onClick={() => {
             store.addNotification({
               title: 'Added to the cart',
@@ -47,7 +47,7 @@ const Cards = ({name, id, imageUrl, price}) => {
             addToBasket();
           }}
         >
-           <span > Add to basket </span>
+           <span> Add to basket </span>
         </button>
       </>
     </div>

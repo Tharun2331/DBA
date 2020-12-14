@@ -15,6 +15,8 @@
   border-radius: 10px;
   border-color: #e26313;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
 
   &:hover {
     background-color: white;

@@ -34,7 +34,7 @@ function Shop() {
             ))) : <h1 style={{marginLeft:"100%",width: "100%"}}> Sorry..... Not Found</h1>
         }
           </div>
-          
+
     
         
      </div> 

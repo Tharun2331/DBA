@@ -1,5 +1,5 @@
-.btn {
-  width: 130px;
+.btn1 {
+  width: 150px;
   height: 35px;
   font-size: 14px;
   border-radius: 35px;
@@ -10,7 +10,7 @@
   -webkit-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   overflow: hidden;
-  margin-left: 30%;
+  margin-left: 23%;
 }
 
 .card_header {
@@ -113,7 +113,7 @@
   cursor: pointer;
 }
 
-.main_content .card:hover .btn {
+.main_content .card:hover .btn1 {
   background-color: #fe8033;
   color: black;
 }

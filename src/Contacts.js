@@ -42,6 +42,7 @@ export default function ContactUs() {
                   className="form-control"
                   placeholder="Name"
                   name="name"
+                  required
                 />
               </div>
               <div className="sub">
@@ -50,6 +51,7 @@ export default function ContactUs() {
                   className="form-control"
                   placeholder="Email Address"
                   name="email"
+                  required
                 />
               </div>
               <div className="sub">
@@ -58,6 +60,7 @@ export default function ContactUs() {
                   className="form-control"
                   placeholder="Subject"
                   name="subject"
+                  required
                 />
               </div>
               <div className="sub">
@@ -68,10 +71,11 @@ export default function ContactUs() {
                   rows="8"
                   placeholder="Your message"
                   name="message"
+                  required
                 ></textarea>
               </div>
           
-            <div className="send_button" onClick={() => alert('We recieved your feedback!! Thanks')}>
+            <div className="send_button">
               <CustomButton >
                 SEND
               </CustomButton>

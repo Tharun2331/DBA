@@ -2,7 +2,6 @@ import React, {useState} from "react";
 import  "./Card-List.css";
 import Card from "./Card";
 import items from "./SHOP_DATA";
-import ShopNow from "./shopnow";
 
 const CardList = ({name,id,imageUrl}) => {
         return (

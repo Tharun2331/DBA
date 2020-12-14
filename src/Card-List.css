@@ -1,4 +1,4 @@
-.btn {
+.btn1 {
   width: 130px;
   height: 35px;
   font-size: 14px;
@@ -103,7 +103,7 @@
   cursor: pointer;
 }
 
-.main_content .card:hover .btn {
+.main_content .card:hover .btn1 {
   background-color: #fe8033;
   color: #fff;
 }
