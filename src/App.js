@@ -14,6 +14,7 @@ import {auth} from "./firebase"
 import Shop from "./Shop";
 
 import CheckoutPage from "./checkoutPage";
+import Orders from "./Orders";
 
 function App() {
 
@@ -63,6 +64,9 @@ return(
           </Route>
           <Route path="/checkout">
               <CheckoutPage />
+          </Route>
+          <Route path="/orders">
+              <Orders />
           </Route>
           <Route exact path="/">
             <HomePage />

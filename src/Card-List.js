@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import  "./Card-List.css";
 import Card from "./Card";
 import items from "./SHOP_DATA";
+import OrdersCart from "./ordersCart";
 
 const CardList = ({name,id,imageUrl}) => {
         return (
@@ -13,7 +14,7 @@ const CardList = ({name,id,imageUrl}) => {
                             items
                             .filter((item,idx) => idx < 3)
                             .map(({name, id, imageUrl, price}) => (
-                                <Card key={id} name={name} imageUrl={imageUrl} price={price} />
+                                <OrdersCart key={id} name={name} imageUrl={imageUrl} price={price} />
                             ))
                         }
                     
@@ -27,7 +28,7 @@ const CardList = ({name,id,imageUrl}) => {
                             items
                             .filter((item,idx) => idx >12 && idx<19)
                              .map(({name, id, imageUrl, price }) => (
-                                <Card key={id} name={name} imageUrl={imageUrl} price={price} />
+                                <OrdersCart key={id} name={name} imageUrl={imageUrl} price={price} />
                             ))
                         }   
                     

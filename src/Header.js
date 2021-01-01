@@ -23,7 +23,7 @@ function Header() {
     history.push("contact-us");
     
   };
-
+ 
   
   const handleUser = () => {
     if(user) {
@@ -67,6 +67,7 @@ function Header() {
             </span>
           </div>
         </div>
+       
 
         <div className="header__option ">
             <Link to = "/checkout">

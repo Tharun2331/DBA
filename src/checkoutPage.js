@@ -6,9 +6,23 @@ import CartCheckout from "./cartCheckout";
 import { getBasketTotal } from "./reducer";
 import Subtotal from "./Subtotal"
 import {useHistory}  from "react-router-dom";
+import Orders from "./Orders";
+
 
 function Checkout() {
+  const handleClick = () => {
+    if(basket.length) {
+      history.push("/orders");
+    }
+    else {
+      alert("Basket is empty, why not fill it up?");
+    }
+   
+
+  }
+ const  history = useHistory();
   const [{ basket, user }, dispatch] = useStateValue();
+ 
   return (
     <div className="checkout">
       <div className="checkout__left">
@@ -36,10 +50,24 @@ function Checkout() {
         Please use the following test credit card for payments
            <br />
         4242 4242 4242 4242 - Exp: 01/22 - CVV: 123
-        <StripeCheckoutButton price={getBasketTotal(basket)} />
+        
+        <div style={{paddingTop: "15px"}} onClick={handleClick}>
+        {basket.length ? <StripeCheckoutButton price={getBasketTotal(basket)} /> : null}
+        </div>
+
+        
+         <button onClick={handleClick}>
+            Orders
+         </button>
+         
+       
 
         </div>
      </div> 
+    
+     
+              
+         
     </div>
   );
 }
