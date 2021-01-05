@@ -1,4 +1,3 @@
-var config = require('./dbConfig');
 const sql = require('mysql');
 const {Query} = require('./queryInstance');
 

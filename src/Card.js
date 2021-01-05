@@ -2,9 +2,11 @@ import React from 'react';
 import "./Card.css";
 import { useStateValue } from './StateProvider';
 import { store } from 'react-notifications-component';
-import ReactNotifications from 'react-notifications-component'
+import Axios from "axios";
+
 const Cards = ({name, id, imageUrl, price}) => {
   const [{basket},dispatch] = useStateValue();
+  const [productId, setProductId] = useStateValue();
   const addToBasket = () => {
     // dispatch the item into the data layer
     dispatch({
@@ -16,9 +18,13 @@ const Cards = ({name, id, imageUrl, price}) => {
         price: price
             }
     });
-    console.log('done');
   }; 
-     
+ 
+  // setProductId(id);
+  console.log(id);
+
+
+  
   
   return (
     <div className="card" key={id}>
@@ -45,6 +51,12 @@ const Cards = ({name, id, imageUrl, price}) => {
               }
             });
             addToBasket();
+
+            Axios.post("http://localhost:8090/cart",
+         {
+           productId: id
+        });
+     
           }}
         >
            <span> Add to basket </span>
@@ -53,7 +65,6 @@ const Cards = ({name, id, imageUrl, price}) => {
     </div>
 </div>
    
-    
     )
 }
 

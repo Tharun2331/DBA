@@ -1,22 +1,40 @@
-import React,{useState} from 'react';
+import React,{useState, useEffect} from 'react';
 import Card from "./Card";
-import SearchIcon from '@material-ui/icons/Search';
 import "./Shop.css";
-import Cards from "./Card";   
-import items from "./SHOP_DATA";
-import { useStateValue } from './StateProvider';
+import Axios from "axios";
+
+
 function Shop() {
     const [searchField,setSearchField] = useState('');
-    
+    const [items, setItems] = useState([]);
 
-    const filter =  items.filter(item => 
-           item.name.toLowerCase().includes(searchField.toLowerCase() )  
-        )
+useEffect(()=>{
+  const getProductsAction = async () => {
+    const getProducts = await Axios({method: "GET", url :"http://localhost:8090/products"});
+    setItems(getProducts.data);
+    console.log(getProducts);
+  }
+
+  getProductsAction();
+},[])
+
 
     return (
         
-      <div> 
-          <div style={{marginLeft: "21%",marginTop: "16%", position: "absolute"}}>
+      <div  className="main_content"> 
+           
+            {
+              items.map(item => {
+              return <Card  id={item.product_id} name={item.product_name} imageUrl={item.product_img} price={item.product_price} />
+            })
+            }
+
+
+
+
+
+
+          {/* <div style={{marginLeft: "21%",marginTop: "16%", position: "absolute"}}>
             <SearchIcon />
           </div>
 
@@ -33,16 +51,16 @@ function Shop() {
                 <Card  key={id} name={name} imageUrl={imageUrl} price={price} />
             ))) : <h1 style={{marginLeft:"100%",width: "100%"}}> Sorry..... Not Found</h1>
         }
-          </div>
+          </div> */}
 
     
         
-     </div> 
+      </div> 
     )                   
 }
 
 export default Shop;
 
 
-
+  
 

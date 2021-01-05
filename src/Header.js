@@ -5,6 +5,7 @@ import { ReactComponent as Logo } from "./assets/Logo.svg";
 import { ReactComponent as Vector } from "./assets/Vector.svg";
 import {auth} from "./firebase";
 import {useStateValue} from "./StateProvider";
+import Axios from "axios";
 
 
 
@@ -26,13 +27,15 @@ function Header() {
  
   
   const handleUser = () => {
+    
     if(user) {
       auth.signOut();
       dispatch({
         type: "EMPTY_BASKET",
         basket: null, 
-     
       });
+    //  Axios.post("http://localhost:8090");
+          
       history.push("/");
     }
     else {
