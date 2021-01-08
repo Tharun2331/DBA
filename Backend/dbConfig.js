@@ -1,17 +1,4 @@
-// const config = {
-//   user :'root',
-//   password :'Password@123',
-//   server:'127.0.0.1',
-//   database:'Products',
-//   options:{
-//       trustedconnection: true,
-//       enableArithAbort : true, 
-//       instancename :'SQLEXPRESS'
-//   },
-//   port : 55892
-// }
 
-// module.exports = config;
 
 // Libraries
 const mysql = require("mysql");

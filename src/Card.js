@@ -4,9 +4,8 @@ import { useStateValue } from './StateProvider';
 import { store } from 'react-notifications-component';
 import Axios from "axios";
 
-const Cards = ({name, id, imageUrl, price}) => {
+const Card = ({name, id, imageUrl, price}) => {
   const [{basket},dispatch] = useStateValue();
-  const [productId, setProductId] = useStateValue();
   const addToBasket = () => {
     // dispatch the item into the data layer
     dispatch({
@@ -42,8 +41,8 @@ const Cards = ({name, id, imageUrl, price}) => {
             store.addNotification({
               title: 'Added to the cart',
               message: `${name}`,
-              type: 'info',                         // 'default', 'success', 'info', 'warning'
-              container: 'top-right',                // where to position the notifications
+              type: 'success',                         // 'default', 'success', 'info', 'warning'
+              container: 'bottom-right',                // where to position the notifications
               animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
               animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
               dismiss: {
@@ -68,7 +67,7 @@ const Cards = ({name, id, imageUrl, price}) => {
     )
 }
 
-export default Cards
+export default Card
 
 
 

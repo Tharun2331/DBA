@@ -2,6 +2,7 @@ import React,{useState} from 'react';
 import "./SignUp.scss";
 import {useHistory} from "react-router-dom";
 import Axios from "axios";
+import {auth} from "./firebase";
 
 import CustomButton from "./Custom-Button"
 
@@ -14,8 +15,8 @@ function SignUp() {
     const [address, setAddress] = useState("");
     const [pnumber, setPNumber] = useState('');
 
-const register = (e) => {
-  Axios.post("http://localhost:8090",
+const register = async (e) => {
+  Axios.post("http://localhost:8090/signup",
    {email: email,
    address: address,
    userName: userName,
@@ -23,13 +24,22 @@ const register = (e) => {
   })
   
    
-  //  e.preventDefault();
+   e.preventDefault();
+
+   auth
+            .createUserWithEmailAndPassword(email, pnumber)
+            .then((auth) => {
+                // it successfully created a new user with email and password
+                if (auth) {
+                    history.push('/')
+                }
+            })
+            .catch(error => alert(error.message))
   
-  //    setEmail("");
-     
-  //    setAddress('');
-  //    setPNumber('');
-  //    setUserName('');
+     setEmail("");
+     setAddress('');
+     setPNumber('');
+     setUserName('');
   };
 
     

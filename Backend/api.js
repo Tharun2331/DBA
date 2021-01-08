@@ -6,10 +6,10 @@ var cors = require('cors');
 var app = express();
 var router = express.Router();
 
-// import Orders from './Order';
+
 const {db} = require('./dbConfig');
 const {Query} = require('./queryInstance');
-const {Products} = require('./products');
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors());
@@ -27,9 +27,6 @@ router.use((request,response,next)=>{
    next();
 })
 
-app.get("/",(req,res) =>{
-    res.send("hello")
-})
 
 //products
 app.get("/products", async (req,res) =>{
@@ -48,6 +45,7 @@ app.get("/total", async (req, res) => {
    res.send(total);
 })
 
+
 //grandTotal
 app.get("/grandTotal", async (req, res) => {
    const grandTotal = await Query(`select tax_amount from tax`);
@@ -56,32 +54,25 @@ app.get("/grandTotal", async (req, res) => {
 
 //deleteCartTotal
 app.post("/emptyCart",async (req, res) => {
-   await Query(`DELETE from cart`);
+   await Query(`DELETE FROM cart`);
 })
 
-//home
-app.post("/",async (req, res) => {
+//deleteCartItem
+app.post("/emptyCartItem",async (req, res) => {
+   const {productId} = req.body;
+   console.log(productId);
+   await Query(`DELETE FROM cart WHERE product_id =('${productId}')`);
+})
+
+
+//signup
+app.post("/signup",async (req, res) => {
 const {email,address,pnumber,userName} =req.body;
 
    await Query(`INSERT INTO user ( user_name, email, address, phone_num) VALUES 
    ('${userName}', '${email}', '${address}', ${pnumber} )`)
 });
-//login
-app.post("/login", async (req, res) => {
 
-   try{
-      const {emailLogin,pnumberLogin} = req.body;
-  
-      const CheckUser = await Query(`SELECT * FROM user WHERE email = "${emailLogin}" AND phone_num = ${pnumberLogin}`);
-     
-     if(CheckUser.length === 0) return res.status(400).json({error:"Wrong email/phone_num combination"});
-     
-     return res.status(200).json({userData:CheckUser[0]});
-     
-   }catch(err){return res.status(400).json({error:"Wrong email/phone_num combination"});}
-
-
-});
 
 //cart 
 app.post("/cart", async (req,res) => {

@@ -13,7 +13,7 @@ import Axios from "axios";
 
 
 function Header() {
-  const [{ user,basket },dispatch] =  useStateValue();  
+  const [{user,basket},dispatch] =  useStateValue();  
   const history = useHistory();
   
   const handleShop = () => {
@@ -34,8 +34,9 @@ function Header() {
         type: "EMPTY_BASKET",
         basket: null, 
       });
-    //  Axios.post("http://localhost:8090");
-          
+
+      Axios.post("http://localhost:8090/emptyCart");
+   
       history.push("/");
     }
     else {

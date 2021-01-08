@@ -2,7 +2,7 @@ import React,{useState, useEffect} from 'react';
 import Card from "./Card";
 import "./Shop.css";
 import Axios from "axios";
-
+import SearchIcon from '@material-ui/icons/Search';
 
 function Shop() {
     const [searchField,setSearchField] = useState('');
@@ -16,25 +16,17 @@ useEffect(()=>{
   }
 
   getProductsAction();
-},[])
+},[]);
 
+const filter =  items.filter(item => 
+  item.product_name.toLowerCase().includes(searchField.toLowerCase())  
+);
 
     return (
         
-      <div  className="main_content"> 
-           
-            {
-              items.map(item => {
-              return <Card  id={item.product_id} name={item.product_name} imageUrl={item.product_img} price={item.product_price} />
-            })
-            }
+      <div  > 
 
-
-
-
-
-
-          {/* <div style={{marginLeft: "21%",marginTop: "16%", position: "absolute"}}>
+           <div style={{marginLeft: "21%",marginTop: "16%", position: "absolute"}}>
             <SearchIcon />
           </div>
 
@@ -47,11 +39,11 @@ useEffect(()=>{
           { 
               filter.length ? 
 
-            (filter.map(({name, id, imageUrl, price}) => (
-                <Card  key={id} name={name} imageUrl={imageUrl} price={price} />
-            ))) : <h1 style={{marginLeft:"100%",width: "100%"}}> Sorry..... Not Found</h1>
+            (filter.map(item => (
+                <Card  id = {item.product_id} name={item.product_name} imageUrl={item.product_img} price={item.product_price} />
+            ))) : <h1 style={{marginLeft:"100%",width: "100%"}}> Sorry..... Not Found </h1>
         }
-          </div> */}
+          </div> 
 
     
         
