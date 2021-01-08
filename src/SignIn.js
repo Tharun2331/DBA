@@ -1,42 +1,46 @@
 import React,{useState} from 'react';
 import "./SignIn.scss";
 import CustomButton from "./Custom-Button";
+import Axios from "axios";
 import {auth} from "./firebase";
 import {useHistory} from "react-router-dom";
 
 function SignIn() {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
+    const [emailLogin, setEmailLogin] = useState("");
+    const [pnumberLogin, setPNumberLogin] = useState('');
     const history = useHistory();
 
-    const handleSubmit = (e) => {
+    const login = (e) => {
+        // Axios.post("http://localhost:8090/login",
+        //  {emailLogin: emailLogin,
+        //  pnumberLogin: pnumberLogin 
+        // })
+         
          e.preventDefault();
 
-         setEmail("");
-         setPassword("");
+         setEmailLogin('');
+         setPNumberLogin('');
 
          auth
-            .signInWithEmailAndPassword(email, password)
-            .then(auth => {
-                history.push('/')
-            })
-            .catch(error => alert(error.message))
-
-            
-    }
-
-   
+         .signInWithEmailAndPassword(emailLogin,pnumberLogin )
+         .then(auth => {
+             history.push('/')
+         })
+         .catch(error => alert(error.message))
+ }
+        
+    
     
     return (
         <div className="sign__in">
            <h3 style ={{marginLeft: "-7%" }}>I already have an account</h3>
-           <span style={{marginLeft: "-5%"}}>Sign In With Your Email And Password</span>
+           <span style={{marginLeft: "-5%"}}>Sign In With Your Email And Phone Number</span>
             <form  className="form"  >
-                <input autoComplete="off" className="signIn form-control" auto placeholder="Email" value={email} type="email" name="email" onChange={e => setEmail(e.target.value)}/>
-                <input autoComplete="off" className="signIn form-control" placeholder="password" value={password} type="password" name="password" onChange={e => setPassword(e.target.value)}/>
+                <input autoComplete="off" className="signIn form-control" placeholder="Email" value={emailLogin} type="email" name="email" onChange={e => setEmailLogin(e.target.value)}/>
+                <input autoComplete="off" className="signIn form-control" placeholder="phone number" value={pnumberLogin} type="password" name="pnumber" onChange={e =>setPNumberLogin(e.target.value)}/>
                 
             </form>
-            <CustomButton onClick={handleSubmit}>
+            <CustomButton onClick={login}>
                     SIGN IN
                 </CustomButton>
         </div>

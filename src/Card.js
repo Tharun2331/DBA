@@ -2,8 +2,9 @@ import React from 'react';
 import "./Card.css";
 import { useStateValue } from './StateProvider';
 import { store } from 'react-notifications-component';
-import ReactNotifications from 'react-notifications-component'
-const Cards = ({name, id, imageUrl, price}) => {
+import Axios from "axios";
+
+const Card = ({name, id, imageUrl, price}) => {
   const [{basket},dispatch] = useStateValue();
   const addToBasket = () => {
     // dispatch the item into the data layer
@@ -16,9 +17,13 @@ const Cards = ({name, id, imageUrl, price}) => {
         price: price
             }
     });
-    console.log('done');
   }; 
-     
+ 
+  // setProductId(id);
+  console.log(id);
+
+
+  
   
   return (
     <div className="card" key={id}>
@@ -36,8 +41,8 @@ const Cards = ({name, id, imageUrl, price}) => {
             store.addNotification({
               title: 'Added to the cart',
               message: `${name}`,
-              type: 'info',                         // 'default', 'success', 'info', 'warning'
-              container: 'top-right',                // where to position the notifications
+              type: 'success',                         // 'default', 'success', 'info', 'warning'
+              container: 'bottom-right',                // where to position the notifications
               animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
               animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
               dismiss: {
@@ -45,6 +50,12 @@ const Cards = ({name, id, imageUrl, price}) => {
               }
             });
             addToBasket();
+
+            Axios.post("http://localhost:8090/cart",
+         {
+           productId: id
+        });
+     
           }}
         >
            <span> Add to basket </span>
@@ -53,11 +64,10 @@ const Cards = ({name, id, imageUrl, price}) => {
     </div>
 </div>
    
-    
     )
 }
 
-export default Cards
+export default Card
 
 
 

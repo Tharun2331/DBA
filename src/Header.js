@@ -5,6 +5,7 @@ import { ReactComponent as Logo } from "./assets/Logo.svg";
 import { ReactComponent as Vector } from "./assets/Vector.svg";
 import {auth} from "./firebase";
 import {useStateValue} from "./StateProvider";
+import Axios from "axios";
 
 
 
@@ -12,7 +13,7 @@ import {useStateValue} from "./StateProvider";
 
 
 function Header() {
-  const [{ user,basket },dispatch] =  useStateValue();  
+  const [{user,basket},dispatch] =  useStateValue();  
   const history = useHistory();
   
   const handleShop = () => {
@@ -26,13 +27,16 @@ function Header() {
  
   
   const handleUser = () => {
+    
     if(user) {
       auth.signOut();
       dispatch({
         type: "EMPTY_BASKET",
         basket: null, 
-     
       });
+
+      Axios.post("http://localhost:8090/emptyCart");
+   
       history.push("/");
     }
     else {

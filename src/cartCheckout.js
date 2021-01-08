@@ -1,8 +1,8 @@
 import React from 'react';
-
+import Axios from "axios";
 import { useStateValue } from './StateProvider';
 import { store } from 'react-notifications-component';
-import ReactNotifications from 'react-notifications-component'
+
 const CartCheckout = ({name, id, imageUrl, price}) => {
 
   const [{basket},dispatch] = useStateValue();
@@ -11,7 +11,6 @@ const CartCheckout = ({name, id, imageUrl, price}) => {
       type: "REMOVE_FROM_BASKET",
         id:id
     });
-    console.log('done');
   }; 
      
   
@@ -40,6 +39,11 @@ const CartCheckout = ({name, id, imageUrl, price}) => {
               }
             })
             removeFromBasket();
+            Axios.post("http://localhost:8090/emptyCartItem",
+         {
+           productId: id
+        });
+
           }}
         >
            <span > Remove from basket </span>
